@@ -1,5 +1,5 @@
 export const SITE = {
-	title: 'Documentation',
+	title: 'ZiJingBlog',
 	description: 'Your website description.',
 	defaultLanguage: 'en-us',
 } as const;
@@ -36,11 +36,11 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+		'2021': [
+			{ text: 'Introduction', link: 'docs/en/introduction' },
+			{ text: 'Page 2', link: 'docs/en/page-2' },
+			{ text: 'Page 3', link: 'docs/en/page-3' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'2023': [{ text: 'Page 4', link: 'docs/en/page-4' }],
 	},
 };
