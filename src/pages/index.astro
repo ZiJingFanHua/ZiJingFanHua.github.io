@@ -35,7 +35,12 @@ const projects = (await getCollection("work"))
 					align="start"
 				>
 					<div class="roles">
-						<Pill>开始</Pill>
+						<a href="#skill">
+							<div class="begin">
+								<Pill>开始</Pill>
+							</div>
+						</a>
+
 						<!-- <Pill><Icon icon="code" size="1.33em" /> 关于我</Pill> -->
 						<a href="/blog/">
 							<Pill>
@@ -55,7 +60,9 @@ const projects = (await getCollection("work"))
 				</a>
 			</header>
 
-			<Skills />
+			<div id="skill">
+				<Skills />
+			</div>
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
@@ -109,7 +116,19 @@ const projects = (await getCollection("work"))
 
 		<ContactCTA />
 	</div>
+	<!-- <div style="width:100px;height:990px"></div> -->
 </BaseLayout>
+
+<!-- 开始滑动 -->
+<script>
+	var begin = document.getElementsByClassName("begin")[0];
+	begin.addEventListener("click", function () {
+		window.scrollTo({
+			top: 1000,
+			behavior: "smooth",
+		});
+	});
+</script>
 
 <style>
 	.hero {
@@ -123,6 +142,9 @@ const projects = (await getCollection("work"))
 		display: none;
 	}
 
+	.roles .begin {
+		cursor: pointer;
+	}
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;

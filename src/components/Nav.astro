@@ -1,7 +1,7 @@
 ---
 import Icon, { Props as IconProps } from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-
+import Search from "./Header/Search";
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: "Home", href: "/" },
@@ -45,7 +45,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 		</menu-button>
 	</div>
 	<div id="menu-content">
-		<ul class="nav-items">
+		<!-- <ul class="nav-items">
 			{
 				textLinks.map(({ label, href }) => (
 					<li>
@@ -66,7 +66,14 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 					</li>
 				))
 			}
-		</ul>
+		</ul> -->
+
+		<!-- <div class="nav-items">
+		</div> -->
+		<div class="search-item">
+			<Search client:idle />
+		</div>
+
 		<div class="menu-footer">
 			<div class="socials">
 				{
@@ -127,7 +134,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 		position: relative;
 		font-family: var(--font-brand);
 		font-weight: 500;
-		margin-bottom: 3.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.menu-header {
@@ -272,6 +279,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 			font-size: var(--text-sm);
 			border-radius: 999rem;
 			border: 0;
+			width: 20rem;
 			padding: 0.5rem 0.5625rem;
 			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
 			box-shadow: var(--shadow-md);
@@ -286,6 +294,21 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 			z-index: -1;
 		}
 
+		.search-item {
+			background-color: white;
+			border-radius: 22px;
+			overflow: hidden;
+			position: relative;
+			z-index: 10;
+			flex-grow: 1;
+			display: flex;
+			width: 400px;
+		}
+		@media (min-width: 50em) {
+			.search-item {
+				max-width: 400px;
+			}
+		}
 		.link {
 			padding: 0.5rem 1rem;
 			border-radius: 999rem;
