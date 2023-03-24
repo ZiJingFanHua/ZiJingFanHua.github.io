@@ -10,6 +10,6 @@ export default defineConfig({
 		// Enable React for the Algolia search component.
 		react(),
 	],
-  site: 'https://ZiJingFanHua.github.io/zijingWeb',
-  base: '',
+  site: 'https://ZiJingFanHua.github.io',
+  base: '/zijingWeb',
 });
