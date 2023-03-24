@@ -11,5 +11,5 @@ export default defineConfig({
 		react(),
 	],
   site: 'https://ZiJingFanHua.github.io',
-  base: '/zijingWeb',
+  base: '',
 });
