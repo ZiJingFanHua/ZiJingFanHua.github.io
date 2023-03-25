@@ -1,35 +1,14 @@
 ---
-title: Markdown Mystery Tour
+title: 加拿大洛基山脉-Canadian Rockies
 publishDate: 2020-03-02 00:00:00
 img: /assets/stock-1.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  一生必去的地方.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - 旅游
+  - 推荐
+  - 风景
 ---
 
-## Level-two heading
-
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
-
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
-
-### Level-three heading
-
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
-
-### Level-three heading
-
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
-
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
-
-#### Level-four heading
-
-- We noted this
-- And also this other point
+落基山脉一般定义为从加拿大的里阿德河到新墨西哥州的格兰德河，南北两端再延伸只能是属于美洲山地的一部分，不再属于落基山脉。落基山脉的比较年轻地部分，是在白垩纪时代（大约1.4亿年至6500万年前）隆起的，南部可能在前寒武纪（大约39.8亿年至6亿年前）就已经隆起了。落基山脉的地质结构主要由火成岩和变质岩组成，在南部边缘也有年轻的沉积岩。在有些地区有第三纪（大约6500万年至180万年前）喷发的火山岩。从更新世到全新世（1800万年-1.1万年前）发生多次冰河时期，当时黄石公园的90%都被冰川覆盖着，从1550年到1860年还属于“小冰河时代”，冰川曾经向前推进。落基山最初为巨大的地槽地区，到白垩纪初期还只是浅海，第三纪时发生了大规模的造山运动、火山爆发，地壳发生了强烈的褶曲与压缩，山脉再度隆起，形成了高大的花岗岩山系；第四纪时，冰川的作用又留下了陡峭的角峰、冰斗、槽谷等冰川侵蚀的地貌特征，再加长期的地壳变动，逐渐形成落基山的现状。山脉主要形成于白垩纪末至第三纪初的拉拉米造山运动，在白垩纪末（约1亿4550万年前～约6550万年前）至老第三纪（6550万年前至2300万年前）。从寒武纪早期时代（5.42亿年前以前）至白垩纪，地层受东西方向的压力，形成褶曲（地层呈波状弯曲）及断层（地层断开错离）并随之隆起。之后经抬升及旺盛的侵蚀，构造地形比较复杂。黄石国家公园以北的北落基山，西部出露前寒武纪和古生代花岗岩，以高大的块状山体为主；东部在长列褶皱和冲断层构造基础上，条状山脉比较普遍，其间隔以断层谷地。黄石公园至怀俄明盆地为中落基山，宽度较大。西部以条状山脉与断层谷地相间为特征；东部多为单一背斜隆起，边缘陡峭的高原状山脉，山体短促，走向不一，间隔以宽广的向斜盆地。怀俄明盆地以南是南落基山，为整个落基山脉最雄伟的部分，由东西两组平行的背斜山脉组成，出露前寒武纪结晶岩，高度很大，海拔4200米以上的高峰有48座，埃尔伯特山即位于此。在这个地域有被称为“布尔吉斯页岩”的地层。在寒武纪中期（5.13亿年前至5.10亿年前）的地层，接连发现了名叫“奇虾”及“怪诞虫”的化石，与的生物相比，它们的形状实在不可思议。1980年，发现有布尔吉斯页岩的约霍国家公园首先被列选为世界自然遗产。后来，在1984年，入选为自然遗产的区域扩大，而成为加拿大落基山脉公园群。
