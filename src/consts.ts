@@ -27,6 +27,9 @@ export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
 // ALGOLIA 配置
 export const ALGOLIA = {
+	// indexName: 'zijingWeb',
+	// appId: 'XZSSKNJDAG',
+	// apiKey: 'f5123d6482af4d3a40c09f6b60567144',
 	indexName: 'zijingWeb',
 	appId: 'XZSSKNJDAG',
 	apiKey: 'f5123d6482af4d3a40c09f6b60567144',
