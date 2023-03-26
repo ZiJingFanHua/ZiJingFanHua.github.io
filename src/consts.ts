@@ -25,11 +25,11 @@ export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/exa
 
 export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
-// See "Algolia" section of the README for more information.
+// ALGOLIA 配置
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: 'zijngWeb',
+	appId: 'XZSSKNJDAG',
+	apiKey: 'f5123d6482af4d3a40c09f6b60567144',
 };
 
 export type Sidebar = Record<
