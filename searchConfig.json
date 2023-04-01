@@ -1,6 +1,6 @@
 {
   "index_name": "zijingWeb",
-  "start_urls": ["https://ZiJingFanHua.github.io"], 
+  "start_urls": ["https://zijingfanhua.github.io/docs/en"], 
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
