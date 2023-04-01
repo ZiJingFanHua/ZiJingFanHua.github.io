@@ -1,6 +1,8 @@
 {
   "index_name": "zijingWeb",
-  "start_urls": ["https://zijingfanhua.github.io/docs/en/internet-attack"], 
+  "start_urls": ["https://zijingfanhua.github.io/docs/en/**"], 
+  "sitemap_urls": ["https://www.zhaobc.site/sitemap.xml"],
+  "sitemap_alternate_links": true,
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
