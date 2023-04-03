@@ -1,7 +1,8 @@
 {
   "index_name": "zijingWeb",
   "start_urls": ["https://zijingfanhua.github.io/docs/en/internet-attack",
-  "https://zijingfanhua.github.io/docs/en/astro-fast-building"], 
+  "https://zijingfanhua.github.io/docs/en/astro-fast-building",
+  "https://zijingfanhua.github.io/docs/en/resolve-cross-domain-issues"], 
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {

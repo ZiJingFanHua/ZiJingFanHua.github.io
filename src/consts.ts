@@ -41,14 +41,11 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'2021': [
-			{ text: 'Introduction', link: 'docs/en/introduction' },
-			{ text: 'Page 2', link: 'docs/en/page-2' },
-			{ text: 'Page 3', link: 'docs/en/page-3' },
+		'2022': [
+			{ text: '解决跨域', link: 'docs/en/resolve-cross-domain-issues' },
 			{ text: '常见网络攻击', link: 'docs/en/internet-attack' },
 		],
-		'2023': [{ text: 'Page 4', link: 'docs/en/page-4' },
-		{ text: "Bloom box", link: 'docs/en/bloom-box' }],
+		'2023': [{ text: "Bloom box", link: 'docs/en/bloom-box' }],
 		'框架配置': [{ text: 'Astro快速搭建博客', link: 'docs/en/astro-fast-building' }],
 	},
 };
