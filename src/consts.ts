@@ -45,7 +45,6 @@ export const SIDEBAR: Sidebar = {
 			{ text: '解决跨域', link: 'docs/en/resolve-cross-domain-issues' },
 			{ text: '常见网络攻击', link: 'docs/en/internet-attack' },
 		],
-		'2023': [{ text: "Bloom box", link: 'docs/en/bloom-box' }],
 		'框架配置': [{ text: 'Astro快速搭建博客', link: 'docs/en/astro-fast-building' }],
 	},
 };
