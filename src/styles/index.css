@@ -112,6 +112,8 @@ a {
 	text-underline-offset: 0.08em;
 	align-items: center;
 	gap: 0.5rem;
+	text-decoration: none;
+	color: black;
 }
 
 article > section :is(ul, ol) > * + * {

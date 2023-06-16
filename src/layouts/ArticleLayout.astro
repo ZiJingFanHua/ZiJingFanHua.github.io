@@ -41,11 +41,13 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 			.layout {
 				display: grid;
 				grid-auto-flow: column;
-				grid-template-columns: 300px auto 250px;
+				grid-column-gap: 50px;
+				grid-template-columns: 350px auto 300px;
 			}
 
 			.grid-sidebar {
-				height: 100vh;
+				/* height: 100vh; */
+				height: calc(100vh - var(--theme-navbar-height));
 				position: sticky;
 				top: var(--theme-navbar-height);
 				padding: 0;
@@ -74,8 +76,9 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 			@media (min-width: 50em) {
 				.layout {
 					overflow: initial;
+					grid-column-gap: 50px;
 					/* grid-template-columns: 20rem minmax(0, var(--max-width)); */
-					grid-template-columns: 300px auto 250px;
+					grid-template-columns: 350px auto 300px;
 					gap: 1em;
 				}
 
@@ -89,8 +92,9 @@ const githubEditUrl = `${GITHUB_EDIT_URL}/${currentFile}`;
 
 			@media (min-width: 72em) {
 				.layout {
+					grid-column-gap: 50px;
 					/* grid-template-columns: 20rem minmax(0, var(--max-width)) 18rem; */
-					grid-template-columns: 300px auto 250px;
+					grid-template-columns: 350px auto 300px;
 					padding-left: 0;
 					padding-right: 0;
 					margin: 0 auto;
