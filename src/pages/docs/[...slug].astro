@@ -1,7 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
-
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
 export async function getStaticPaths() {
 	const docs = await getCollection("docs");
 	return docs.map((entry) => ({
@@ -17,6 +17,6 @@ const post = Astro.props;
 const { Content, headings } = await post.render();
 ---
 
-<MainLayout headings={headings} {...post.data}>
+<ArticleLayout headings={headings} {...post.data}>
 	<Content />
-</MainLayout>
+</ArticleLayout>
