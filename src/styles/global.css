@@ -176,6 +176,19 @@ h5 {
 	font-size: var(--text-xl);
 }
 
+summary {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+summary::-webkit-details-marker {
+	display: inline-block;
+	width: 0.66em;
+	height: 0.66em;
+	margin-inline-end: 0.4em;
+}
+
 /* Utilities */
 
 .sr-only {

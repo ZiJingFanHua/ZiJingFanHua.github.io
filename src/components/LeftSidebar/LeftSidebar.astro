@@ -1,6 +1,7 @@
 ---
 import { getLanguageFromURL } from "../../languages";
 import { SIDEBAR } from "../../consts";
+import Icon from "../Icon.astro";
 type Props = {
 	currentPage: string;
 };
@@ -11,41 +12,47 @@ const currentPageMatch = currentPage.endsWith("/")
 	: currentPage.slice(1);
 const langCode = getLanguageFromURL(currentPage);
 const sidebar = SIDEBAR[langCode];
+let firstDetails = true;
 ---
 
-	<nav aria-labelledby="grid-left">
-		<ul class="nav-groups">
-			{
-				Object.entries(sidebar).map(([header, children]) => (
-					<li>
-						<div class="nav-group">
-							<h2>{header}</h2>
-							<ul>
-								{children.map((child) => {
-									const url = Astro.site?.pathname + child.link;
-									// console.log(Astro.site);
-									// console.log(1);
-									// const url = "http://localhost:3000" + child.link;
-									return (
-										<li class="nav-link">
-											<a
-												href={url}
-												aria-current={
-													currentPageMatch === child.link ? "page" : false
-												}
-											>
-												{child.text}
-											</a>
-										</li>
-									);
-								})}
-							</ul>
-						</div>
-					</li>
-				))
-			}
-		</ul>
-	</nav>
+<nav aria-labelledby="grid-left">
+	<ul class="nav-groups">
+		{
+			Object.entries(sidebar).map(([header, children]) => (
+				<li>
+					<details class="nav-group" id="first-details" open="true">
+						<summary>
+							<h2 class="title-2">{header}</h2>
+							<span class="right-icon">
+								<Icon icon="right" size="1.0em" />
+							</span>
+							<span class="down-icon">
+								<Icon icon="down" size="1.0em" />
+							</span>
+						</summary>
+						<ul>
+							{children.map((child) => {
+								const url = Astro.site?.pathname + child.link;
+								return (
+									<li class="nav-link">
+										<a
+											href={url}
+											aria-current={
+												currentPageMatch === child.link ? "page" : false
+											}
+										>
+											{child.text}
+										</a>
+									</li>
+								);
+							})}
+						</ul>
+					</details>
+				</li>
+			))
+		}
+	</ul>
+</nav>
 
 <script is:inline>
 window.addEventListener("DOMContentLoaded", () => {
@@ -62,6 +69,22 @@ window.addEventListener("DOMContentLoaded", () => {
 		margin-right: 1rem;
 	}
 
+	details > summary > .down-icon {
+		display: none;
+	}
+
+	details[open] > summary > .down-icon {
+		display: inline-block;
+	}
+	details[open] > summary > .right-icon {
+		display: none;
+	}
+
+	.nav-title {
+		display: flex;
+		justify-content: space-between;
+	}
+
 	.nav-groups {
 		height: 100%;
 		padding: 2rem 0;
@@ -75,7 +98,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	}
 
 	.nav-groups > :first-child {
-		padding-top: var(--doc-padding);
+		/* padding-top: var(--doc-padding); */
 	}
 
 	.nav-groups > :last-child {
@@ -110,6 +133,14 @@ window.addEventListener("DOMContentLoaded", () => {
 		color: var(--theme-text-accent);
 		background-color: var(--theme-bg-accent);
 		font-weight: 600;
+	}
+
+	.nav-title-two {
+		display: flex;
+		justify-content: space-between;
+	}
+	.title-2 {
+		font-size: 30px;
 	}
 
 	@media (min-width: 50em) {

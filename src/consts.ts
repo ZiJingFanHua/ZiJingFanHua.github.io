@@ -1,3 +1,12 @@
+/*
+ * @Author: 紫荆
+ * @Date: 2023-03-22 16:34:02
+ * @LastEditors: 紫荆
+ * @LastEditTime: 2023-06-21 16:23:43
+ * @FilePath: \zijingWeb\src\consts.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * 
+ */
 import { link } from "fs";
 
 export const SITE = {
@@ -41,7 +50,7 @@ export type Sidebar = Record<
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'2023': [ {text: 'HTTP常见状态码',link: 'docs/en/常见状态码'}],
+		'2023': [{ text: 'HTTP常见状态码', link: 'docs/en/常见状态码' }],
 		'2022': [
 			{ text: '解决跨域', link: 'docs/en/resolve-cross-domain-issues' },
 			{ text: '常见网络攻击', link: 'docs/en/internet-attack' },

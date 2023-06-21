@@ -41,8 +41,10 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
 //内部链接
 const textLinks: { label: string; href: string }[] = [
   { label: "首页", href: "/" },
-  { label: "博客", href: "/work/" },
-  { label: "随笔", href: "/about/" },
+  { label: "博客", href: "/" },
+  { label: "笔记", href: "/" },
+  { label: "措施", href: "/" },
+  { label: "随笔", href: "/" },
 ];
 ---
 
@@ -85,7 +87,7 @@ const textLinks: { label: string; href: string }[] = [
       <div class="theme right-item">
         <ThemeToggle client:visible />
       </div>
-      <div class="menu-footer">
+      <div class="menu-footer right-item">
         <div class="socials">
           {
             iconLinks.map(({ href, icon, label }) => (
@@ -107,17 +109,22 @@ const textLinks: { label: string; href: string }[] = [
     height: var(--theme-navbar-height);
     width: 100%;
     background-color: var(--theme-navbar-bg);
-    /* display: flex; */
-    /* align-items: center;
-		justify-content: center; */
-    overflow: hidden;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid black;
   }
+
+  header::after {
+    margin-top: 24px;
+    display: block;
+    width: 100%;
+    height: 32px;
+    background: linear-gradient(white, transparent 70%);
+    content: "";
+  }
+
   .logo {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 2rem;
     flex-shrink: 0;
     font-weight: 600;
@@ -155,7 +162,7 @@ const textLinks: { label: string; href: string }[] = [
   .nav-wrapper {
     display: grid;
     grid-column-gap: 50px;
-    grid-template-columns: 350px auto 600px 250px;
+    grid-template-columns: 260px auto 600px 250px;
     width: 100%;
     padding: 0 1rem;
   }
@@ -163,7 +170,8 @@ const textLinks: { label: string; href: string }[] = [
   @media (min-width: 50em) {
     header {
       /* position: static; */
-      padding: 2rem 0rem;
+      padding: 2rem;
+      /* margin-bottom: 24px; */
     }
 
     .logo {
@@ -209,6 +217,8 @@ const textLinks: { label: string; href: string }[] = [
   }
   .right-item {
     margin: 0 20px;
+    display: flex;
+    align-items: center;
   }
   .nav-title {
     display: flex;
@@ -218,9 +228,10 @@ const textLinks: { label: string; href: string }[] = [
     margin: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 1rem;
     font-size: var(--text-base);
-    line-height: 1.2;
+    /* line-height: 1.2; */
     list-style: none;
     padding: 2rem;
     background-color: var(--gray-999);
@@ -229,6 +240,7 @@ const textLinks: { label: string; href: string }[] = [
 
   .socials {
     display: flex;
+    margin-top: 10px;
     flex-wrap: wrap;
     gap: 0.625rem;
     font-size: var(--icon-size);
