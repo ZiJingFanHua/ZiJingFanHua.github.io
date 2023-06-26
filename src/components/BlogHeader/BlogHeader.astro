@@ -2,8 +2,7 @@
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from "../../languages";
 import { SITE } from "../../consts";
 import Logo from "../BlogLogo/Logo.astro";
-import ThemeToggleButton from "../ThemeToggleButton/ThemeToggleButton";
-import ThemeToggle from "../ThemeToggle.astro";
+// import ThemeToggle from "../ThemeToggle.astro";
 import Search from "./Search";
 import Icon, { Props as IconProps } from "../Icon.astro";
 import "../../styles/global.css";
@@ -85,7 +84,7 @@ const textLinks: { label: string; href: string }[] = [
     </div>
     <div class="nav-right">
       <div class="theme right-item">
-        <ThemeToggle client:visible />
+        <!-- <ThemeToggle client:visible /> -->
       </div>
       <div class="menu-footer right-item">
         <div class="socials">
