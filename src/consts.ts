@@ -46,16 +46,16 @@ export const ALGOLIA = {
 
 export type Sidebar = Record<
 	(typeof KNOWN_LANGUAGE_CODES)[number],
-	Record<string, { text: string; link: string }[]>
+	Record<string, { text: string; link: string;type:string }[]>
 >;
 export const SIDEBAR: Sidebar = {
 	en: {
-		'2023': [{ text: 'HTTP常见状态码', link: 'docs/en/常见状态码' }],
+		'2023': [{ text: 'HTTP常见状态码', link: 'docs/en/com-http-code' ,type:'blog'}],
 		'2022': [
-			{ text: '解决跨域', link: 'docs/en/resolve-cross-domain-issues' },
-			{ text: '6月', link: '' },
-			{ text: '常见网络攻击', link: 'docs/en/internet-attack' },
+			{ text: '解决跨域', link: 'docs/en/resolve-cross-domain-issues' ,type:'blog'},
+			{ text: '6月', link: '' , type:'month'},
+			{ text: '常见网络攻击', link: 'docs/en/internet-attack' ,type:'blog'},
 		],
-		'框架配置': [{ text: 'Astro快速搭建博客', link: 'docs/en/astro-fast-building' }],
+		'框架配置': [{ text: 'Astro快速搭建博客', link: 'docs/en/astro-fast-building' ,type:'blog'}],
 	},
 };
