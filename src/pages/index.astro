@@ -11,18 +11,41 @@ import Hero from "../components/Hero.astro";
 import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
 import PortfolioPreview from "../components/PortfolioPreview.astro";
-
 // Page section components
+import ContentNav from "../components/ContentNav.astro";
 import ContactCTA from "../components/ContactCTA.astro";
-import Skills from "../components/Skills.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+// import Skills from "../components/Skills.astro";
 
+import { SIDEBAR } from "../consts";
+import { object } from "astro/zod";
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+// 文章显示
+let articles = []
+const getNextArticles = () =>{
+	articles = [];
+	 let keys = Object.keys(SIDEBAR.en)
+	 for(let key of keys){
+		for (let article of SIDEBAR.en[key]){
+			if(!article.introduction.includes('分隔')){
+				articles.push(article)
+				if(articles.length>7){
+					break;
+				}
+			 }else{
+				continue;
+			 }
+		}
+		if(articles.length>7){
+					break;
+				}
+	 }
+}
+getNextArticles()
 ---
 
 <BaseLayout>
@@ -36,7 +59,7 @@ const projects = (await getCollection("work"))
 				>
 					<div class="roles">
 						<a href="#skill">
-							<div class="begin">
+							<div class="begin begin-pill">
 								<Pill>开始</Pill>
 							</div>
 						</a>
@@ -60,13 +83,31 @@ const projects = (await getCollection("work"))
 				</a>
 			</header>
 
-			<div id="skill">
-				<Skills />
+			<div id="contentNav">
+				<ContentNav />
 			</div>
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
+			<!-- <section class="section with-background" id ="me">
+       <div class="about-me">
+          <div class="person">
+					</div>
+			 </div>
+			</section> -->
+			<section class="section with-background" id="article">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>最近发布</h3>
+				</header>
+				<div class="article-container">
+					{
+						articles.map((article:any)=>{
+							return <ArticleCard article={article}></ArticleCard>
+						})
+					}
+				</div>
+			</section>
+			<!-- <section class="section with-background with-cta" id="me">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>旅游</h3>
 					<p>
@@ -92,9 +133,9 @@ const projects = (await getCollection("work"))
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
-			</section>
+			</section> -->
 
-			<section class="section with-background bg-variant">
+			<section class="section with-background bg-variant" id="article">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>兴趣</h3>
 					<p>下面的是我的一些个人兴趣爱好</p>
@@ -156,6 +197,21 @@ const projects = (await getCollection("work"))
 	.hero img:hover {
 		transform: scale(1.02);
 		transition: all 1s;
+	}
+	.begin-pill {
+		border-radius: 50%;
+		background-color: ;
+		box-shadow: 8px 4px 16px #5e0e85, -8px -4px 16px #8e14c7;
+		transition: all  10s;
+	}
+
+	.begin-pill:hover {
+		background-color: ;
+		border-radius: 50%;
+		box-shadow: inset 8px 4px 16px #5e0e85,inset -8px -4px 16px #8e14c7;
+	}
+	.article-container {
+		display: flex;
 	}
 	@media (min-width: 50em) {
 		.hero {

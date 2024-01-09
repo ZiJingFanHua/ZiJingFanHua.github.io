@@ -115,7 +115,9 @@ a {
 	text-decoration: none;
 	color: black;
 }
-
+a:hover {
+	text-decoration: none;
+}
 article > section :is(ul, ol) > * + * {
 	margin-top: 0.75rem;
 }
@@ -174,7 +176,7 @@ a > code::before {
 
 a:hover,
 a:focus {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 a:focus {

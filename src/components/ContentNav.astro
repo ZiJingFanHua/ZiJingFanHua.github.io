@@ -1,0 +1,94 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="box skills">
+  <a href="#me">
+	<div class="stack gap-2 lg:gap-4 neumorphism-button">
+		<!-- <a href=""> -->
+		<Icon
+			icon="terminal-window"
+			color="var(--accent-regular)"
+			size="2.5rem"
+			gradient
+		/>
+		<h2>关于我</h2>
+		<p>想更多的了解我吗？</p>
+	</div>
+</a>
+<a href="#article">
+	<div class="stack gap-2 lg:gap-4 neumorphism-button">
+		<Icon
+			icon="strategy"
+			color="var(--accent-regular)"
+			size="2.5rem"
+			gradient
+		/>
+		<h2>文章</h2>
+		<p>记录学习的一些理解</p>
+	</div>
+</a>
+<a href="#other">
+	<div class="stack gap-2 lg:gap-4 neumorphism-button">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>其他</h2>
+		<p>someThing</p>
+	</div>
+</a>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	.stack {
+		padding: 2.5rem;
+	}
+	.neumorphism-button {
+		border-radius: 50px;
+		background: #f0f0f0;
+		box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;
+	}
+
+	.neumorphism-button:active {
+		border-radius: 50px;
+		background: #f0f0f0;
+		box-shadow: inset 20px 20px 60px #cccccc, inset -20px -20px 60px #ffffff;
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			/* padding: 2.5rem; */
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
