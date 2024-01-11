@@ -95,17 +95,15 @@ getNextArticles()
 					</div>
 			 </div>
 			</section> -->
-			<section class="section with-background" id="article">
+			<section class="section with-background with-article" id="article">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>最近发布</h3>
 				</header>
-				<div class="article-container">
 					{
 						articles.map((article:any)=>{
 							return <ArticleCard article={article}></ArticleCard>
 						})
 					}
-				</div>
 			</section>
 			<!-- <section class="section with-background with-cta" id="me">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -210,9 +208,6 @@ getNextArticles()
 		border-radius: 50%;
 		box-shadow: inset 8px 4px 16px #5e0e85,inset -8px -4px 16px #8e14c7;
 	}
-	.article-container {
-		display: flex;
-	}
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
@@ -291,6 +286,9 @@ getNextArticles()
 			grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
 		}
 
+		.section .with-article {
+			grid-template-areas: "article" "gallery";
+		}
 		.section-header {
 			grid-area: header;
 			font-size: var(--text-lg);
